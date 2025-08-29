@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
 
 :root {
-
+    background-color: #f1f1f1;
     --transition: all 0.3s ease;
 }
 
@@ -37,8 +37,7 @@ body {
     margin-right: 1000px;
 }
 
-
- .menu-sobre {
+.menu-sobre {
     margin-left: 200px;
     font-family: 'Maven Pro', serif;
     font-weight: 600;
@@ -46,9 +45,9 @@ body {
     display: block;
     flex-direction: row;
     flex-wrap: wrap;
-} 
+}
 
- .menu-pedidos {
+.menu-pedidos {
     margin-left: 450px;
     margin-top: -2%;
     font-family: 'Maven Pro', serif;
@@ -78,46 +77,33 @@ body {
     flex-wrap: wrap;
 }
 
-.titulo{
+.titulo {
     font-size: 50px;
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
     margin-top: 10%;
 }
 
-.subtitle{
+.subtitle {
     font-size: 35px;
     font-family: 'Maven Pro', serif;
     font-weight: 500;
     color: #f1f1f1;
 }
 
-.slogan, b{
+.slogan,
+b {
     font-size: 25px;
     font-family: 'Maven Pro', serif;
     font-weight: 500;
     margin-top: 65px;
-    b{
+
+    b {
         font-weight: 800;
         color: #F1B523;
     }
 }
 
-/* .destaque{
-    font-size: 25px;
-    font-family: 'Maven Pro', serif;
-    font-weight: 500;
-    color: #F1B523;
-} */
-
-
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Maven Pro', serif;
-    font-weight: 700;
-}
 
 .container {
     max-width: 1200px;
@@ -131,17 +117,7 @@ header {
     position: relative;
 }
 
-/** .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--dark-blue);
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-} **/
-
 .subtitle {
-    font-style: italic;
     color: var(--gold);
     font-size: 1.2rem;
     margin-bottom: 30px;
@@ -149,23 +125,116 @@ header {
     display: inline-block;
 }
 
-.subtitle::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background-color: var(--gold);
+.divisoria {
+    position: relative;
+    display: table;
+    width: 99vw;
+    height: 100vh;
+    color: white;
+    margin-top: -510px;
+    margin-left: -77px;
 }
 
-.categories {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 40px;
+.section, .section2{
+    font-size: 35px;
+    font-family: 'Maven Pro', serif;
+    margin-top: -20vh;
+    font-weight: 800;
+    color: #F1B523;
+    z-index: 10;
+    position: relative;
+    text-align: center;
+}
+
+.section2{
+    margin-top: 50px;
+}
+
+    .favorito{
+    font-size: 25px;
+    font-family: 'Maven Pro', serif;
+    margin-top: 70px;
+    margin-left: 50%;
+    text-align: center;
+    font-weight: 600;
+    color: #F1B523;
+    }
+
+        .favorito2{
+    font-size: 25px;
+    font-family: 'Maven Pro', serif;
+    text-align: center;
+    font-weight: 600;
+    color: #F1B523;
+    margin-right: 30%;
+    }
+
+    .description{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 17px;
+    color: #5E5E5E;
+    margin-top: 75px;
+    width: 55%;
+    text-align: right;
+    margin-left: 45%;
+    }
+
+        .description2{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 17px;
+    color: #5E5E5E;
+    margin-top: 35px;
+    width: 102%;
+    text-align: center;
+    }
+    .fachada{
+        width: 300px;
+        height: 400px;
+        margin-top: -250px;
+        margin-left: 80px;
+    }
+
+    .detalhes{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 17px;
+    color: #5E5E5E;
+    margin-top: 45px;
+    width: 55%;
+    text-align: right;
+    margin-left: 45%;
+    }
+
+        .detalhes2{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 17px;
+    color: #5E5E5E;
+    margin-top: 45px;
+    width: 55%;
+    text-align: left;
+    margin-right: 30%;
+    }
+
+    .preco{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #F1B523;
+position: relative;    
+text-align: right;
+}
+
+.calabresa{
+        width: 40vw;
+        height: auto;
+        margin-top: -30%;
+        margin-left: -45px;
+}
+
+.picanha{
+        width: 40vw;
+        height: auto;
+        margin-top: -30%;
+        margin-left: 60%;
 }
 
 .category-btn {
@@ -412,7 +481,10 @@ footer {
         text-align: center;
         margin-top: -40px;
         font-size: 1rem;
+        display: block;
     }
+
+
 
 
 }
