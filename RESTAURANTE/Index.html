@@ -62,173 +62,114 @@
         <p class="detalhes2">Crocantes por fora e macias por dentro, nossas batatas se juntam à calabresa dourada na
             medida certa, formando a dupla que nunca falha. Um clássico de boteco que combina perfeitamente com uma
             cerveja gelada e a resenha da galera na hora do futebol.</p>
-                    <p class="preco2">R$74,99</p>
+        <p class="preco2">R$74,99</p>
         <img src="./Imagens/picanha.png" class="picanha">
 
         <div class="onda"></div>
         <div class="cardapio"></div>
 
+        <!-- Seção 03: Avaliações -->
+        <h1 class="section2"> Ainda em dúvida se deve conhecer o Brasileirinho? </h1>
+        <div class="" </div>
 
-    </div>
+            <nav class="categories">
 
-    <nav class="categories">
+            </nav>
 
-    </nav>
-
-    <main class="dishes-grid">
-        <!-- Prato 1 -->
-        <div class="dish-card" data-category="principal">
-            <span class="signature">ESPECIALIDADE</span>
-            <img src="imagens/file-oswaldo-aranha.jpg" alt="Filé Oswaldo Aranha" class="dish-image">
-            <div class="dish-info">
-                <div class="dish-title">
-                    <span>Filé Oswaldo Aranha</span>
-                    <span class="dish-price">R$ 98</span>
+            <main class="dishes-grid">
+                <!-- Prato 1 -->
+                <div class="avaliacao-card">
+                    <div class="avaliacao">
+                        <div class="avaliacao-info">
+                            <div class="dish-title">
+                                <img class="usuario" src="./Imagens/zeca.png">
+                                <span class="nome-usuario">Zeca Pagodinho</span>
+                                <img src="./Imagens/estrela.png" class="estrela"><span class="nota">5.00</span>
+                            </div>
+                            <p class="dish-description">“Os camarões estavam simplesmente perfeitos! Suculentos,
+                                temperados na medida certa e com aquele toque especial do Brasileirinho. A cada garfada,
+                                é impossível não lembrar do Rio. Afinal, camarão que dorme, a onda leva… mas aqui a onda
+                                só leva elogios!”.</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="dish-description">Clássico carioca: filé mignon grelhado acompanhado de arroz branco,
-                    farofa crocante e alho fatiado.</p>
-                <div class="dish-tags">
-                    <span class="dish-tag">Carne</span>
-                    <span class="dish-tag">Tradicional</span>
+
+                <div class="avaliacao-card">
+                    <div class="avaliacao">
+                        <div class="avaliacao-info">
+                            <div class="dish-title">
+                                <img class="usuario" src="./Imagens/thiago.png">
+                                <span class="nome-usuario">Thiago André</span>
+                                <img src="./Imagens/estrela.png" class="estrela"><span class="nota">5.00</span>
+                            </div>
+                            <p class="dish-description">“Não tem erro! A batata frita com calabresa é perfeita para
+                                compartilhar com os amigos, e o tempero é simplesmente irresistível. Ambiente acolhedor
+                                e cheio de alegria. Recomendo demais!”.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+
+                <div class="avaliacao-card">
+                    <div class="avaliacao">
+                        <div class="avaliacao-info">
+                            <div class="dish-title">
+                                <img class="usuario" src="./Imagens/leonardo.png">
+                                <span class="nome-usuario">Leonardo</span>
+                                <img src="./Imagens/estrela.png" class="estrela"><span class="nota">5.00</span>
+                            </div>
+                            <p class="dish-description">“Ô cumpadi, esse Brasileirinho é bom demais da conta! Provei a
+                                batata com calabresa e lembrei logo da moda de viola. É do jeito que a gente gosta: mesa
+                                cheia, cerveja gelada e todo mundo rindo junto. Se tocar Cumade e Compade aqui, eu não
+                                respondo por mim, viu? Já saio cantando e chamando a turma pra dançar no meio do salão!”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="footer">
+                                    <img class="logo" src="./Imagens/logo.png">
+
+                    <div class="contact-info">
+                        <p class="endereco"> Av. Getúlio Vargas, 1250 – Jardim Estoril, Bauru/SP</p>
+                        <p></p>
+                    </div>
+                    <div class="social-icons">
+                        <div class="section3">Se interessou? Não dá mole, chama nois!</div>
+                        <img src="./Imagens/facebook.png" class="facebook">
+                                                <img src="./Imagens/instagram.png" class="instagram">
+                        <img src="./Imagens/whatsapp.png" class="whats">
+
+                        <img src="./Imagens/unisagrado.png" class="unisagrado">
+
+                    </div>
+
+                </footer>
         </div>
 
-        <!-- Prato 2 -->
-        <div class="dish-card" data-category="frutos-mar">
-            <img src="imagens/moqueca-carioca.jpg" alt="Moqueca Carioca" class="dish-image">
-            <div class="dish-info">
-                <div class="dish-title">
-                    <span>Moqueca Carioca</span>
-                    <span class="dish-price">R$ 112</span>
-                </div>
-                <p class="dish-description">Peixe nobre preparado com dendê, leite de coco, pimentões e cebola,
-                    finalizado com coentro.</p>
-                <div class="dish-tags">
-                    <span class="dish-tag">Peixe</span>
-                    <span class="dish-tag">Afro-brasileira</span>
-                </div>
-            </div>
-        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const categoryButtons = document.querySelectorAll('.category-btn');
+                const dishCards = document.querySelectorAll('.avaliacao-card');
 
-        <!-- Prato 3 -->
-        <div class="dish-card" data-category="entradas">
-            <img src="imagens/bolinhos-bacalhau.jpg" alt="Bolinhos de Bacalhau" class="dish-image">
-            <div class="dish-info">
-                <div class="dish-title">
-                    <span>Bolinhos de Bacalhau</span>
-                    <span class="dish-price">R$ 48</span>
-                </div>
-                <p class="dish-description">Clássica iguaria portuguesa adaptada pela culinária carioca.</p>
-                <div class="dish-tags">
-                    <span class="dish-tag">Petisco</span>
-                    <span class="dish-tag">Tradicional</span>
-                </div>
-            </div>
-        </div>
+                categoryButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        categoryButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
 
-        <!-- Prato 4 -->
-        <div class="dish-card" data-category="principal">
-            <span class="signature">CHEF'S PICK</span>
-            <img src="imagens/risoto-camarao-cupim.jpg" alt="Risoto de Camarão com Cupim" class="dish-image">
-            <div class="dish-info">
-                <div class="dish-title">
-                    <span>Risoto de Camarão com Cupim</span>
-                    <span class="dish-price">R$ 126</span>
-                </div>
-                <p class="dish-description">Arroz arbório cremoso com camarões frescos e pedaços suculentos de
-                    cupim.</p>
-                <div class="dish-tags">
-                    <span class="dish-tag">Fusion</span>
-                    <span class="dish-tag">Premium</span>
-                </div>
-            </div>
-        </div>
+                        const category = button.getAttribute('data-category');
 
-        <!-- Prato 5 -->
-        <div class="dish-card" data-category="sobremesas">
-            <img src="imagens/brigadeiro-gourmet.jpg" alt="Brigadeiro Gourmet" class="dish-image">
-            <div class="dish-info">
-                <div class="dish-title">
-                    <span>Brigadeiro Gourmet</span>
-                    <span class="dish-price">R$ 32</span>
-                </div>
-                <p class="dish-description">Reinvenção do clássico brasileiro: brigadeiro de chocolate belga com
-                    raspas de laranja.</p>
-                <div class="dish-tags">
-                    <span class="dish-tag">Doce</span>
-                    <span class="dish-tag">Gourmet</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Prato 6 -->
-        <div class="dish-card" data-category="frutos-mar">
-            <img src="imagens/salmao-maracuja.jpg" alt="Salmão com Maracujá" class="dish-image">
-            <div class="dish-info">
-                <div class="dish-title">
-                    <span>Salmão com Maracujá</span>
-                    <span class="dish-price">R$ 118</span>
-                </div>
-                <p class="dish-description">Salmão selvagem grelhado com molho de maracujá e gengibre, acompanhado
-                    de arroz de coco.</p>
-                <div class="dish-tags">
-                    <span class="dish-tag">Peixe</span>
-                    <span class="dish-tag">Tropical</span>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="contact-info">
-            <p>Av. Vieira Souto, 168 - Ipanema, Rio de Janeiro</p>
-            <p>Reservas: (21) 2525-2525 | contato@brasileirinho.com.br</p>
-        </div>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div>
-
-        <div class="uni-logo">
-            <span class="uni-logo-text">Desenvolvido por:</span>
-            <div class="uni-badge">
-                <span class="uni-line1">UNIVERSIDADE DO</span>
-                <span class="uni-line2">SAGRADO</span>
-                <span class="uni-line3">CORACAO</span>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <p>&copy; 2023 Brasileirinho - Todos os direitos reservados</p>
-        </div>
-    </footer>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const categoryButtons = document.querySelectorAll('.category-btn');
-        const dishCards = document.querySelectorAll('.dish-card');
-
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                categoryButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                const category = button.getAttribute('data-category');
-
-                dishCards.forEach(card => {
-                    if (category === 'all' || card.getAttribute('data-category') === category) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
+                        dishCards.forEach(card => {
+                            if (category === 'all' || card.getAttribute('data-category') === category) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    });
                 });
             });
-        });
-    });
-</script>
-</div>
+        </script>
+    </div>
 
 </html>
