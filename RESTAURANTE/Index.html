@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brasileirinho - Sabores Cariocas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<div class="body">
     <div class="container">
         <header>
-            <div class="logo">Brasileirinho</div>
-            <div class="subtitle">Sabores cariocas com requinte</div>
-            <div class="decorative-element"></div>
-            <div class="all">Todos</div>
-            <div class="entradas">Entradas</div>
-            <div class="principal">Pratos Principais</div>
-            <div class="frutos-mar">Frutos do Mar</div>
-            <div class="sobremesas">Sobremesas</div>
+                        <div class="bg">
+            <!-- logo restaurante -->
+            <img class="icon" src="./Imagens/logo.png">
+
+            <!-- menu -->
+            <div class="menu-sobre">Sobre nós</div>
+            <div class="menu-pedidos">Mais pedidos</div>
+            <div class="menu-avaliacoes">Avaliações</div>
+            <div class="menu-contato">Contato</div> 
+
+            <!-- -->
+            <div class="titulo">Brasileirinho</div>
+            <div class="subtitle">O melhor do Rio de Janeiro, agora perto de sua casa.</div>
+            <div class="slogan">Afinal, comida de qualidade? Não tem jeito, é <b>coisa nossa.</div>
+
         </header>
 
         <nav class="categories">
@@ -35,7 +42,8 @@
                         <span>Filé Oswaldo Aranha</span>
                         <span class="dish-price">R$ 98</span>
                     </div>
-                    <p class="dish-description">Clássico carioca: filé mignon grelhado acompanhado de arroz branco, farofa crocante e alho fatiado.</p>
+                    <p class="dish-description">Clássico carioca: filé mignon grelhado acompanhado de arroz branco,
+                        farofa crocante e alho fatiado.</p>
                     <div class="dish-tags">
                         <span class="dish-tag">Carne</span>
                         <span class="dish-tag">Tradicional</span>
@@ -51,7 +59,8 @@
                         <span>Moqueca Carioca</span>
                         <span class="dish-price">R$ 112</span>
                     </div>
-                    <p class="dish-description">Peixe nobre preparado com dendê, leite de coco, pimentões e cebola, finalizado com coentro.</p>
+                    <p class="dish-description">Peixe nobre preparado com dendê, leite de coco, pimentões e cebola,
+                        finalizado com coentro.</p>
                     <div class="dish-tags">
                         <span class="dish-tag">Peixe</span>
                         <span class="dish-tag">Afro-brasileira</span>
@@ -84,7 +93,8 @@
                         <span>Risoto de Camarão com Cupim</span>
                         <span class="dish-price">R$ 126</span>
                     </div>
-                    <p class="dish-description">Arroz arbório cremoso com camarões frescos e pedaços suculentos de cupim.</p>
+                    <p class="dish-description">Arroz arbório cremoso com camarões frescos e pedaços suculentos de
+                        cupim.</p>
                     <div class="dish-tags">
                         <span class="dish-tag">Fusion</span>
                         <span class="dish-tag">Premium</span>
@@ -100,7 +110,8 @@
                         <span>Brigadeiro Gourmet</span>
                         <span class="dish-price">R$ 32</span>
                     </div>
-                    <p class="dish-description">Reinvenção do clássico brasileiro: brigadeiro de chocolate belga com raspas de laranja.</p>
+                    <p class="dish-description">Reinvenção do clássico brasileiro: brigadeiro de chocolate belga com
+                        raspas de laranja.</p>
                     <div class="dish-tags">
                         <span class="dish-tag">Doce</span>
                         <span class="dish-tag">Gourmet</span>
@@ -116,7 +127,8 @@
                         <span>Salmão com Maracujá</span>
                         <span class="dish-price">R$ 118</span>
                     </div>
-                    <p class="dish-description">Salmão selvagem grelhado com molho de maracujá e gengibre, acompanhado de arroz de coco.</p>
+                    <p class="dish-description">Salmão selvagem grelhado com molho de maracujá e gengibre, acompanhado
+                        de arroz de coco.</p>
                     <div class="dish-tags">
                         <span class="dish-tag">Peixe</span>
                         <span class="dish-tag">Tropical</span>
@@ -135,7 +147,7 @@
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
             </div>
-            
+
             <div class="uni-logo">
                 <span class="uni-logo-text">Desenvolvido por:</span>
                 <div class="uni-badge">
@@ -144,7 +156,7 @@
                     <span class="uni-line3">CORACAO</span>
                 </div>
             </div>
-            
+
             <div class="copyright">
                 <p>&copy; 2023 Brasileirinho - Todos os direitos reservados</p>
             </div>
@@ -152,17 +164,17 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const categoryButtons = document.querySelectorAll('.category-btn');
             const dishCards = document.querySelectorAll('.dish-card');
-            
+
             categoryButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     categoryButtons.forEach(btn => btn.classList.remove('active'));
                     button.classList.add('active');
-                    
+
                     const category = button.getAttribute('data-category');
-                    
+
                     dishCards.forEach(card => {
                         if (category === 'all' || card.getAttribute('data-category') === category) {
                             card.style.display = 'block';
@@ -174,5 +186,6 @@
             });
         });
     </script>
-</body>
+</div>
+
 </html>
