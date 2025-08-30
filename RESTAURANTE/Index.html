@@ -6,170 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brasileirinho - Sabores Cariocas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./Imagens/logo.png" type="image/x-icon">
+
 </head>
 
-<div class="body">
-    <div class="container">
-        <header>
-            <div class="bg">
-                <!-- logo restaurante -->
-                <img class="icon" src="./Imagens/logo.png">
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="bg">
+            <div class="container header-top">
+                <img class="icon" src="./Imagens/logo.png" alt="Logo Brasileirinho">
+                <button class="nav-toggle"
+                    onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+                <nav>
+                        <!-- MENU SUPERIOR -->
+                    <ul class="menu">
+                        <li><a href="#sobre">Sobre nós</a></li>
+                        <li><a href="#pedidos">Mais pedidos</a></li>
+                        <li><a href="#avaliacoes">Avaliações</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-                <!-- menu -->
-                <div class="menu-sobre">Sobre nós</div>
-                <div class="menu-pedidos">Mais pedidos</div>
-                <div class="menu-avaliacoes">Avaliações</div>
-                <div class="menu-contato">Contato</div>
-
-                <!-- titulo, subtitulo e slogan-->
-                <div class="titulo">Brasileirinho</div>
-                <div class="subtitle">O melhor do Rio de Janeiro, agora perto de sua casa.</div>
-                <div class="slogan">Afinal, comida de qualidade? Não tem jeito, é <b>coisa nossa.</div>
-
-        </header>
-
-        <div class="body">
-            <img src="./Imagens/divisoria.png" class="divisoria">
+                <!-- TITULO/SLOGAN  -->
+            <div class="container">
+                <h1 class="titulo">Brasileirinho</h1>
+                <p class="subtitle">O melhor do Rio de Janeiro, agora perto de sua casa.</p>
+                <p class="slogan">Afinal, comida de qualidade? Não tem jeito, é <b>coisa nossa.</b></p>
+            </div>
         </div>
+    </header>
 
-        <!-- Seção 01: Sobre nós -->
-        <h1 class="section"> Sobre nós </h1>
-        <p class="description">O Brasileirinho nasceu com um propósito: levar o verdadeiro sabor do Rio de Janeiro para
-            todos os cantos do Brasil. Aqui, cada prato é preparado com cuidado, usando ingredientes frescos e receitas
-            que carregam a autenticidade da culinária carioca.
-            Mais do que comida, queremos transmitir a alegria e o espírito vibrante do RJ. Do tempero da feijoada ao
-            frescor do camarão no molho especial, cada refeição é uma experiência que desperta os sentidos e faz você se
-            sentir como se estivesse caminhando pelas ruas do Rio.
-            No Brasileirinho, cada garfada é uma viagem: cheia de sabor, cores e energia, sempre com um sorriso no
-            coração.</p>
-        <img src="./Imagens/fachada.png" class="fachada">
-
-        <!-- Seção 02: Os queridinhos do Brasil -->
-        <h1 class="section2"> Os queridinhos do Brasil </h1>
-        <p class="description2">No Brasileirinho, celebramos o sabor autêntico do Brasil em cada receita. Nossos pratos
-            favoritos conquistam turistas e clientes locais com combinações únicas de temperos, aromas e tradição. Da
-            clássica feijoada ao irresistível escondidinho, cada garfada é um convite para viver a verdadeira
-            experiência brasileira. </p>
-
-        <h2 class="favorito">Porção de batata com calabresa</h2>
-        <p class="detalhes">Crocantes por fora e macias por dentro, nossas batatas se juntam à calabresa dourada na
-            medida certa, formando a dupla que nunca falha. Um clássico de boteco que combina perfeitamente com uma
-            cerveja gelada e a resenha da galera na hora do futebol.</p>
-        <p class="preco">R$37,99</p>
-        <img src="./Imagens/calabresa.png" class="calabresa">
-
-        <h2 class="favorito2">Picanha com fritas</h2>
-        <p class="detalhes2">Crocantes por fora e macias por dentro, nossas batatas se juntam à calabresa dourada na
-            medida certa, formando a dupla que nunca falha. Um clássico de boteco que combina perfeitamente com uma
-            cerveja gelada e a resenha da galera na hora do futebol.</p>
-        <p class="preco2">R$74,99</p>
-        <img src="./Imagens/picanha.png" class="picanha">
-
-        <div class="onda"></div>
-        <div class="cardapio"></div>
-
-        <!-- Seção 03: Avaliações -->
-        <h1 class="section2"> Ainda em dúvida se deve conhecer o Brasileirinho? </h1>
-        <div class="" </div>
-
-            <nav class="categories">
-
-            </nav>
-
-            <main class="dishes-grid">
-                <!-- Prato 1 -->
-                <div class="avaliacao-card">
-                    <div class="avaliacao">
-                        <div class="avaliacao-info">
-                            <div class="dish-title">
-                                <img class="usuario" src="./Imagens/zeca.png">
-                                <span class="nome-usuario">Zeca Pagodinho</span>
-                                <img src="./Imagens/estrela.png" class="estrela"><span class="nota">5.00</span>
-                            </div>
-                            <p class="dish-description">“Os camarões estavam simplesmente perfeitos! Suculentos,
-                                temperados na medida certa e com aquele toque especial do Brasileirinho. A cada garfada,
-                                é impossível não lembrar do Rio. Afinal, camarão que dorme, a onda leva… mas aqui a onda
-                                só leva elogios!”.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="avaliacao-card">
-                    <div class="avaliacao">
-                        <div class="avaliacao-info">
-                            <div class="dish-title">
-                                <img class="usuario" src="./Imagens/thiago.png">
-                                <span class="nome-usuario">Thiago André</span>
-                                <img src="./Imagens/estrela.png" class="estrela"><span class="nota">5.00</span>
-                            </div>
-                            <p class="dish-description">“Não tem erro! A batata frita com calabresa é perfeita para
-                                compartilhar com os amigos, e o tempero é simplesmente irresistível. Ambiente acolhedor
-                                e cheio de alegria. Recomendo demais!”.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="avaliacao-card">
-                    <div class="avaliacao">
-                        <div class="avaliacao-info">
-                            <div class="dish-title">
-                                <img class="usuario" src="./Imagens/leonardo.png">
-                                <span class="nome-usuario">Leonardo</span>
-                                <img src="./Imagens/estrela.png" class="estrela"><span class="nota">5.00</span>
-                            </div>
-                            <p class="dish-description">“Ô cumpadi, esse Brasileirinho é bom demais da conta! Provei a
-                                batata com calabresa e lembrei logo da moda de viola. É do jeito que a gente gosta: mesa
-                                cheia, cerveja gelada e todo mundo rindo junto. Se tocar Cumade e Compade aqui, eu não
-                                respondo por mim, viu? Já saio cantando e chamando a turma pra dançar no meio do salão!”
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <footer class="footer">
-                                    <img class="logo" src="./Imagens/logo.png">
-
-                    <div class="contact-info">
-                        <p class="endereco"> Av. Getúlio Vargas, 1250 – Jardim Estoril, Bauru/SP</p>
-                        <p></p>
-                    </div>
-                    <div class="social-icons">
-                        <div class="section3">Se interessou? Não dá mole, chama nois!</div>
-                        <img src="./Imagens/facebook.png" class="facebook">
-                                                <img src="./Imagens/instagram.png" class="instagram">
-                        <img src="./Imagens/whatsapp.png" class="whats">
-
-                        <img src="./Imagens/unisagrado.png" class="unisagrado">
-
-                    </div>
-
-                </footer>
-        </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const categoryButtons = document.querySelectorAll('.category-btn');
-                const dishCards = document.querySelectorAll('.avaliacao-card');
-
-                categoryButtons.forEach(button => {
-                    button.addEventListener('click', () => {
-                        categoryButtons.forEach(btn => btn.classList.remove('active'));
-                        button.classList.add('active');
-
-                        const category = button.getAttribute('data-category');
-
-                        dishCards.forEach(card => {
-                            if (category === 'all' || card.getAttribute('data-category') === category) {
-                                card.style.display = 'block';
-                            } else {
-                                card.style.display = 'none';
-                            }
-                        });
-                    });
-                });
-            });
-        </script>
+    <!-- DIVISORIA SEÇÕES -->
+    <div class="body">
+        <img src="./Imagens/divisoria.png" class="divisoria">
     </div>
+
+    <!-- SOBRE NÓS -->
+    <main class="section-title">
+        <section id="sobre">
+            <h2 class="section">Sobre nós</h2>
+            <p class="description">
+                O Brasileirinho nasceu com um propósito: levar o verdadeiro sabor do Rio de Janeiro para
+                todos os cantos do Brasil. Aqui, cada prato é preparado com cuidado, usando ingredientes frescos e
+                receitas
+                que carregam a autenticidade da culinária carioca.
+                Mais do que comida, queremos transmitir a alegria e o espírito vibrante do RJ. Do tempero da feijoada ao
+                frescor do camarão no molho especial, cada refeição é uma experiência que desperta os sentidos e faz
+                você se
+                sentir como se estivesse caminhando pelas ruas do Rio.
+                No Brasileirinho, cada garfada é uma viagem: cheia de sabor, cores e energia, sempre com um sorriso no
+                coração.
+            </p>
+            <img src="./Imagens/fachada.png" class="fachada" alt="Fachada do restaurante Brasileirinho">
+        </section>
+
+        <!-- PRATOS FAVORITOS -->
+        <section class="queridinhos" id="pedidos">
+            <h2>Os Queridinhos do Carioca</h2>
+
+            <!-- Porção de batata -->
+            <div class="prato">
+                <img src="./Imagens/calabresa.png" alt="Porção de batata com calabresa">
+                <div class="texto">
+                    <h3>Porção de batata com calabresa</h3>
+                    <p>Batatas crocantes, calabresa suculenta e tempero na medida certa. O petisco perfeito para
+                        compartilhar ou saborear sozinho, com todo o sabor da comida carioca!</p>
+                    <p class="preco">R$27,99</p>
+                </div>
+            </div>
+
+            <!-- Picanha -->
+            <div class="prato invertido">
+                <img src="./Imagens/picanha.png" alt="Picanha com fritas">
+                <div class="texto">
+                    <h3>Picanha com fritas</h3>
+                    <p>Picanha suculenta e macia, grelhada na perfeição, acompanhada de batatas fritas crocantes. Uma
+                        combinação irresistível que traz todo o sabor da cozinha brasileira em cada garfada!</p>
+                    <p class="preco">R$74,99</p>
+                </div>
+            </div>
+
+
+            <!-- ONDAS/CARDAPIO -->
+            <div class="divisoria">
+                <img src="./Imagens/onda2.png" alt="Ondas de Copacabana">
+            </div>
+
+        </section>
+
+        <!-- AVALIAÇÕES -->
+        <section id="avaliacoes">
+            <h2 class="section2">Ainda em dúvida?</h2>
+            <div class="dishes-grid">
+                <div class="avaliacao-card">
+
+                        <!-- ZECA PAGODINHO -->
+                    <div class="dish-title">
+                        <img class="usuario" src="./Imagens/zeca.png" alt="Usuário Zeca">
+                        <span class="nome-usuario">Zeca Pagodinho</span>
+                        <img src="./Imagens/estrela.png" class="estrela"><span class="nota"><b>5.00</b></span>
+
+                    </div>
+                    <p>“Os camarões estavam simplesmente perfeitos! Temperados na medida certa e com aquele toque
+                        especial do Brasileirinho.”</p>
+                </div>
+
+                    <!-- THIAGO ANDRÉ -->
+                <div class="avaliacao-card">
+                    <div class="dish-title">
+                        <img class="usuario" src="./Imagens/thiago.png" alt="Usuário Thiago">
+                        <span class="nome-usuario">Thiago André</span>
+                        <img src="./Imagens/estrela.png" class="estrela"><span class="nota"><b>5.00</b></span>
+
+                    </div>
+                    <p>“Não tem erro! A batata frita com calabresa é perfeita para compartilhar com os amigos. Ambiente
+                        acolhedor e cheio de alegria.”</p>
+                </div>
+
+                    <!-- LEONARDO -->
+                <div class="avaliacao-card">
+                    <div class="dish-title">
+                        <img class="usuario" src="./Imagens/leonardo.png" alt="Usuário Leonardo">
+                        <span class="nome-usuario">Leonardo</span>
+                        <img src="./Imagens/estrela.png" class="estrela"><span class="nota"><b>5.00</b></span>
+
+                    </div>
+                    <p>“Ô cumpadi, esse Brasileirinho é bom demais da conta! Mesa cheia, cerveja gelada e todo mundo
+                        rindo junto. Se tocar Cumade e Compade aqui, eu saio cantando!”</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contato">
+        <img class="logo" src="./Imagens/logo.png" alt="Logo Brasileirinho">
+        <p>Av. Getúlio Vargas, 1250 – Jardim Estoril, Bauru/SP</p>
+        <div class="social-icons">
+            <img src="./Imagens/facebook.png" alt="Facebook">
+            <img src="./Imagens/instagram.png" alt="Instagram">
+            <img src="./Imagens/whatsapp.png" alt="WhatsApp">
+        </div>
+    </footer>
+</body>
 
 </html>

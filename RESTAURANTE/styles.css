@@ -1,613 +1,454 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
 
 :root {
-    background-color: #f1f1f1;
+    --gold: #F1B523;
+    --dark-blue: #0b3d2e;
+    --light-beige: #f1f1f1;
     --transition: all 0.3s ease;
+    overflow-x: hidden;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Maven Pro', sans-serif;
-    background-color: var(--light-beige);
+    background: var(--light-beige);
     color: var(--dark-blue);
     line-height: 1.6;
+    overflow-x: hidden;
+
+
 }
 
-.bg {
-    position: relative;
-    display: table;
-    width: 99vw;
-    height: 100vh;
+/* CONTAINER */
+.container {
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+    padding: 1rem;
+}
+
+/* HEADER */
+header {
+    background: var(--light-beige);
     color: white;
-    background: url('./Imagens/bg.png') no-repeat bottom center scroll;
-    background-position: 30% 45%;
-    background-size: cover;
-    margin-top: -65px;
-    margin-left: -77px;
+    padding: 1rem 0;
 }
 
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -5%;
+}
 
 .icon {
-    height: 100px;
-    width: 100px;
-    margin-right: 1000px;
+    height: 60px;
 }
 
-.menu-sobre {
-    margin-left: 200px;
-    font-family: 'Maven Pro', serif;
-    font-weight: 600;
-    margin-top: -5%;
-    display: block;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.menu-pedidos {
-    margin-left: 450px;
-    margin-top: -2%;
-    font-family: 'Maven Pro', serif;
-    font-weight: 600;
-    display: block;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.menu-avaliacoes {
-    margin-left: 700px;
-    margin-top: -1.8%;
-    font-family: 'Maven Pro', serif;
-    font-weight: 600;
-    display: block;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.menu-contato {
-    margin-left: 950px;
-    margin-top: -1.8%;
-    font-family: 'Maven Pro', serif;
-    font-weight: 600;
-    display: block;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.titulo {
-    font-size: 50px;
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: bold;
-    margin-top: 10%;
-}
-
-.subtitle {
-    font-size: 35px;
-    font-family: 'Maven Pro', serif;
-    font-weight: 500;
-    color: #f1f1f1;
-}
-
-.slogan,
-b {
-    font-size: 25px;
-    font-family: 'Maven Pro', serif;
-    font-weight: 500;
-    margin-top: 65px;
-
-    b {
-        font-weight: 800;
-        color: #F1B523;
-    }
-}
-
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    text-align: center;
-    padding: 40px 0;
+.section-title {
+    margin-top: -15vw;
+    z-index: 6;
     position: relative;
-}
-
-.subtitle {
-    color: var(--gold);
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
 }
 
 .divisoria {
     position: relative;
-    display: table;
-    width: 99vw;
-    height: 100vh;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 85%;
+    max-height: 115vw;
     color: white;
-    margin-top: -510px;
-    margin-left: -77px;
-}
-
-.section, .section2{
-    font-size: 35px;
-    font-family: 'Maven Pro', serif;
-    margin-top: -20vh;
-    font-weight: 800;
-    color: #F1B523;
-    z-index: 10;
-    position: relative;
-    text-align: center;
-}
-
-.section2{
-    margin-top: 50px;
-}
-
-    .favorito{
-    font-size: 25px;
-    font-family: 'Maven Pro', serif;
-    margin-top: 70px;
-    margin-left: 50%;
-    text-align: center;
-    font-weight: 600;
-    color: #F1B523;
-    }
-
-        .favorito2{
-    font-size: 25px;
-    font-family: 'Maven Pro', serif;
-    text-align: center;
-    font-weight: 600;
-    color: #F1B523;
-    margin-right: 30%;
-    }
-
-    .description{
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 17px;
-    color: #5E5E5E;
-    margin-top: 75px;
-    width: 55%;
-    text-align: right;
-    margin-left: 45%;
-    }
-
-        .description2{
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 17px;
-    color: #5E5E5E;
-    margin-top: 35px;
-    width: 102%;
-    text-align: center;
-    }
-    .fachada{
-        width: 300px;
-        height: 400px;
-        margin-top: -250px;
-        margin-left: 80px;
-    }
-
-    .detalhes{
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 17px;
-    color: #5E5E5E;
-    margin-top: 45px;
-    width: 55%;
-    text-align: right;
-    margin-left: 45%;
-    }
-
-        .detalhes2{
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 17px;
-    color: #5E5E5E;
-    margin-top: 45px;
-    width: 55%;
-    text-align: left;
-    margin-right: 30%;
-    }
-
-    .preco{
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #F1B523;
-position: relative;    
-text-align: right;
-}
-
-    .preco2{
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #F1B523;
-position: relative;    
-text-align: left;
-}
-
-
-.calabresa{
-        width: 40vw;
-        height: auto;
-        margin-top: -30%;
-        margin-left: -45px;
-}
-
-.picanha{
-        width: 40vw;
-        height: auto;
-        margin-top: -30%;
-        margin-left: 60%;
-}
-
-.onda{
-    position: relative;
-    display: table;
-    width: 99vw;
-    height: 100vh;
-    color: white;
-    background: url('./Imagens/onda.png') no-repeat bottom center scroll;
-    background-position: 30% 45%;
-    background-size: cover;
-    margin-top: -20%;
-    margin-left: -77px;
-}
-
-.cardapio{
-    position: relative;
-    display: table;
-    width: 99vw;
-    height: 50vh;
-    color: white;
-    background: url('./Imagens/cardapio.png') no-repeat bottom center scroll;
-    background-position: 30% 45%;
-    background-size: cover;
-    margin-top: -20%;
-    margin-left: -77px;
-}
-
-.estrela{
-    height: 20px;
-    width: 20px;
-    margin-left: 57px;
-}
-
-.usuario{
-    height: 55px;
-    width: 55px;
-}
-
-.nome-usuario{
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    margin-left: 2px;
-}
-
-.category-btn {
-    background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--dark-blue);
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: var(--transition);
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-
-.category-btn:hover,
-.category-btn.active {
-    background: var(--gold);
-    color: var(--dark-blue);
-}
-
-.dishes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-.avaliacao-card {
-    background: var(--white);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: var(--transition);
-    box-shadow: 0 5px 15px rgba(10, 31, 58, 0.08);
-    position: relative;
-}
-
-.dish-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(10, 31, 58, 0.15);
-}
-
-.dish-image {
-    width: 100%;
-    height: 220px;
     object-fit: cover;
-    display: block;
+    margin-top: -623px;
+    z-index: 3;
+    pointer-events: none;
 }
 
-.avaliacao-info {
-    padding: 25px;
+.menu {
+    z-index: 10 !important;
 }
 
-.dish-title {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-    color: var(--dark-blue);
+.bg {
+    background: url('./Imagens/bg.png') no-repeat center center/cover;
+    width: 100%;
+    min-height: 80vh;
+    /* altura inicial */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-top: -5%;
+    z-index: 0 !important;
 }
 
-.dish-price {
-    color: var(--gold);
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
     font-weight: 600;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* MENU MOBILE */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* HERO */
+.titulo {
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 800;
+    margin-top: 1rem;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin-top: .5rem;
+}
+
+.slogan {
+    margin-top: .5rem;
+    font-style: italic;
     font-size: 1.2rem;
 }
 
-.dish-description {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-    color: var(--dark-blue);
-    opacity: 0.8;
-    line-height: 1.7;
-}
-
-.dish-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.dish-tag {
-    background: rgba(198, 169, 114, 0.1);
+.slogan b {
     color: var(--gold);
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 0.75rem;
-    font-weight: 500;
 }
 
-.signature {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: var(--gold);
-    color: var(--white);
-    font-size: 0.7rem;
-    padding: 5px 10px;
-    border-radius: 15px;
-    letter-spacing: 0.5px;
-}
-
-footer {
+/* SEÇÕES */
+.section,
+.section2 {
+    margin-top: 2rem;
     text-align: center;
-    padding: 40px 0;
-    border-top: 1px solid rgba(198, 169, 114, 0.2);
-    width: 100vw;
-    height: 20vw;
-    margin-left: -100px;
-    background-color: #ffffff;
-    display: block;
-}
-
-.facebook{
-    width: 70px;
-    height: 70px;
-    margin-top: -17vw;
-    margin-left: -450px;
-    position: absolute;
-}
-
-.instagram{
-    width: 70px;
-    height: 70px;
-    margin-top: -17vw;
-    margin-left: -200px;
-    position: absolute;
-}
-
-.whats{
-    width: 70px;
-    height: 70px;
-    margin-top: -17vw;
-    margin-left: 70px;
-    position: absolute;
-}
-
-.logo{
-    width: 350px;
-    height: 350px;
-    margin-top: -55px;
-    margin-left: -75%;
-}
-
-.section3{
-        font-size: 28px;
+    font-size: 35px;
     font-family: 'Maven Pro', serif;
-    margin-top: -23%;
-    margin-left: -140px;
     font-weight: 800;
     color: #F1B523;
     z-index: 10;
+    position: relative;
     text-align: center;
-    position: absolute;
+    margin-top: -15px;
 }
 
-.endereco{
-            font-size: 28px;
+.description {
+    margin-top: 1rem;
+    color: #333;
+    text-align: center;
+    margin-inline: auto;
+    margin-left: 50%;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 17px;
+    color: #5E5E5E;
+    width: 40%;
+    margin-top: 75px;
+    text-align: right;
+
+}
+
+.description2 {
+    margin-top: 1rem;
+    color: #333;
+    text-align: center;
+    margin-inline: auto;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 17px;
+    color: #5E5E5E;
+    width: 80%;
+    margin-top: 5px;
+}
+
+
+.favorito {
+    font-size: 25px;
     font-family: 'Maven Pro', serif;
-    margin-top: -10%;
-    margin-left: 400px;
+    margin-top: 70px;
+    margin-right: 11vw;
+    text-align: right;
     font-weight: 600;
     color: #F1B523;
-    z-index: 10;
-    text-align: center;
-    position: absolute;
-
 }
 
-.unisagrado{
-    width: 400px;
-    height: 150px;
-    margin-top: -280px;
-    margin-left: 60vw;
+.detalhes {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 17px;
+    color: #5E5E5E;
+    width: 45%;
+    max-width: 45%;
+    text-align: right;
+    margin-left: 43.5vw;
+    z-index: 10;
     position: relative;
 }
 
-.contact-info {
-    margin-bottom: 25px;
+.preco {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-align: right;
+    margin-top: .5rem;
+    margin-right: 11vw;
+    position: relative;
 }
 
-.contact-info p {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
+.preco2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-align: left;
+    margin-top: .5rem;
+    margin-left: 11vw;
+}
+
+.calabresa {
+    display: block;
+    margin: 1rem auto;
+    height: auto;
+    width: 40vw;
+    max-width: 40vw;
+    min-width: 40vw;
+    min-height: 40vw;
+    max-height: 40vw;
+    margin-top: -320px;
+    margin-left: 10vw;
+}
+
+.favorito2 {
+    font-size: 25px;
+    font-family: 'Maven Pro', serif;
+    text-align: left;
+    font-weight: 600;
+    color: #F1B523;
+    margin-left: 11vw;
+}
+
+.detalhes2 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 17px;
+    color: #5E5E5E;
+    width: 45%;
+    text-align: left;
+    margin-left: 11vw;
+    margin-top: -5px;
+
+}
+
+.picanha {
+    display: block;
+    margin: 1rem auto;
+    height: auto;
+    width: 40vw;
+    margin-top: -25%;
+    margin-right: 5vw;
+}
+
+.fachada {
+    display: block;
+    margin: 1rem auto;
+    height: auto;
+    border-radius: 12px;
+    width: 300px;
+    height: 400px;
+    margin-top: -320px;
+    margin-left: 120px;
+}
+
+.queridinhos {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.queridinhos h2 {
+    color: #f9a825;
+    /* amarelo */
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+
+/* blocos de prato */
+.prato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    /* mais espaço entre imagem e texto */
+    flex-wrap: wrap;
+    /* quebra em telas menores */
+    margin-bottom: 50px;
+    margin-top: -50px;
+}
+
+.prato img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+}
+
+.prato .texto {
+    max-width: 600px;
+    /* aumentei a largura do texto */
+    flex: 1;
+    /* ocupa espaço proporcional */
+    text-align: left;
+    line-height: 1.6;
+    /* leitura mais confortável */
+}
+
+.prato h3 {
+    color: #f9a825;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.preco {
+    max-width: min-content;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-align: right;
+    margin-top: .5rem;
+    margin-right: 11vw;
+    position: relative;
+}
+
+
+/* Inverter ordem (imagem à direita) */
+.prato.invertido {
+    margin-top: -120px;
+    flex-direction: row-reverse;
+}
+
+/* Divisória */
+.divisoria img {
+    width: 110vw;
+    position: relative;
+    margin: 40px 0;
+    margin-top: 490px;
+    margin-left: -10vw;
+
+}
+
+
+/* AVALIAÇÕES */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.avaliacao-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    margin: 15px;
+}
+
+.dish-title {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+.usuario {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nome-usuario {
+    font-weight: 600;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    background: var(--dark-blue);
+    color: white;
+    text-align: center;
+}
+
+.footer .logo {
+    height: 80px;
+    margin-bottom: 1rem;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 25px;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.social-icons a {
-    color: var(--dark-blue);
-    font-size: 1.2rem;
-    transition: var(--transition);
+.social-icons img {
+    width: 40px;
 }
 
-.social-icons a:hover {
-    color: var(--gold);
+.estrela{
+        height: 20px;
+    width: 20px;
+    margin-left: 57px;
 }
 
-.copyright {
-    font-size: 0.85rem;
-    opacity: 0.7;
-    margin-top: 20px;
-}
-
-.uni-logo {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-direction: column;
-}
-
-.uni-logo-text {
-    font-size: 0.9rem;
-    color: var(--dark-blue);
-    margin-bottom: 10px;
-}
-
-.uni-badge {
-    background-color: var(--dark-blue);
-    color: white;
-    padding: 8px 15px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1.2;
-}
-
-.uni-line1 {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-}
-
-.uni-line2 {
-    font-size: 1rem;
-    font-weight: 800;
-}
-
-.uni-line3 {
-    font-size: 0.8rem;
-}
-
-.decorative-element {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    top: 20px;
-    right: 20px;
-    border: 1px solid var(--gold);
-    opacity: 0.1;
-    z-index: -1;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+/* BREAKPOINT MOBILE */
+@media (max-width: 968px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background: var(--dark-blue);
+        padding: 1rem;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    nav ul.open {
+        display: flex;
     }
-}
 
-.dish-card {
-    animation: fadeIn 0.5s ease-out;
-}
-
-.dish-card:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-.dish-card:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-.dish-card:nth-child(4) {
-    animation-delay: 0.3s;
-}
-
-.dish-card:nth-child(5) {
-    animation-delay: 0.4s;
-}
-
-.dish-card:nth-child(6) {
-    animation-delay: 0.5s;
-}
-
-@media screen and (max-width: 968px) {
-    .container {
+    .nav-toggle {
         display: block;
-        background-image: none;
-        box-sizing: border-box;
-
+        margin-top: -15px;
+        margin-left: 60vw;
     }
 
-    .menu-sobre,
-    .menu-pedidos,
-    .menu-contato,
-    .menu-avaliacoes {
-        margin: 0;
-        text-align: center;
-        margin-top: -40px;
-        font-size: 1rem;
-        display: block;
+    .description {
+        margin-left: 10%;
+        width: 80vw;
+        text-align: justify;
     }
 
-
+    .fachada {
+        position: relative;
+        margin-top: 40px;
+        margin-left: 23%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 
 }
