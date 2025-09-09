@@ -1,686 +1,504 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap");
 
+/** ROOT **/
 :root {
-    --gold: #F1B523;
-    --dark-blue: #0b3d2e;
-    --light-beige: #f1f1f1;
-    --transition: all 0.3s ease;
-    overflow-x: hidden;
+  --gold: #f1b523;
+  --dark-blue: #0b3d2e;
+  --light-beige: #f1f1f1;
+  --transition: all 0.3s ease;
+  overflow-x: hidden;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/** BODY **/
 body {
-    font-family: 'Maven Pro', sans-serif;
-    background: var(--light-beige);
-    color: var(--dark-blue);
-    line-height: 1.6;
-    overflow-x: hidden;
+  font-family: "Maven Pro", sans-serif;
+  background: var(--light-beige);
+  color: var(--dark-blue);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.body2{
-    position: relative;
-    z-index: 0 !important;
-    pointer-events: none;
+.body2 {
+  position: relative;
+  z-index: 0 !important;
+  pointer-events: none;
 }
 
 /* CONTAINER */
 .container {
-    width: min(100% - 2rem, 1200px);
-    margin-inline: auto;
-    padding: 1rem;
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+  padding: 1rem;
 }
 
 /* HEADER */
 header {
-    background: var(--light-beige);
-    color: white;
-    padding: 1rem 0;
+  background: var(--light-beige);
+  color: white;
+  padding: 1rem 0;
 }
 
 .header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: -5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -5%;
 }
 
+/** ICONE RESTAURANTE **/
 .icon {
-    height: 60px;
-    z-index: 5;
-    position: relative;
+  height: 60px;
+  z-index: 5;
+  position: relative;
 }
 
 .section-title {
-    margin-top: -15vw;
-    z-index: 6;
-    position: relative;
+  margin-top: -15vw;
+  z-index: 6;
+  position: relative;
 }
 
 .divisoria {
-    position: relative;
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 85%;
-    max-height: 115vw;
-    color: white;
-    object-fit: cover;
-    margin-top: -623px;
-    z-index: 3;
-    pointer-events: none;
+  position: relative;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 85%;
+  max-height: 115vw;
+  color: white;
+  object-fit: cover;
+  margin-top: -623px;
+  z-index: 3;
+  pointer-events: none;
 }
 
-.cardapio{
-        position: relative;
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 85%;
-    max-height: 115vw;
-    color: white;
-    object-fit: cover;
-    z-index: 3;
-    pointer-events: none;
-    margin-left: 22px;
+.cardapio {
+  position: relative;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 85%;
+  max-height: 115vw;
+  color: white;
+  object-fit: cover;
+  z-index: 3;
+  pointer-events: none;
+  margin-left: 22px;
 }
 
 .cardapio img {
-    width: 110vw;
-    position: relative;
-    top: -150px;
+  width: 110vw;
+  position: relative;
+  top: -150px;
 }
 
 .menu {
-    z-index: 10 !important;
+  z-index: 10 !important;
 }
 
+/** PLANO DE FUNDO - RJ **/
 .bg {
-    background: url('./Imagens/bg.png') no-repeat center center/cover;
-    width: 100%;
-    min-height: 80vh;
-    /* altura inicial */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    position: relative;
-    margin-top: -5%;
-    z-index: 0 !important;
+  background: url("./Imagens/bg.png") no-repeat center center/cover;
+  width: 100%;
+  min-height: 80vh;
+  /* altura inicial */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-top: -5%;
+  z-index: 0 !important;
 }
-
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
 }
 
 nav a:hover {
-    color: var(--gold);
+  color: var(--gold);
 }
 
 /* MENU MOBILE */
 .nav-toggle {
-    display: none;
-    background: none;
-    border: 0;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 
 /* HERO */
 .titulo {
-    font-size: clamp(2rem, 6vw, 3rem);
-    font-weight: 800;
-    margin-top: 1rem;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  margin-top: 1rem;
 }
 
 .subtitle {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    margin-top: .5rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-top: 0.5rem;
 }
 
 .slogan {
-    margin-top: .5rem;
-    font-style: italic;
-    font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 1.2rem;
 }
 
 .slogan b {
-    color: var(--gold);
+  color: var(--gold);
 }
 
 /* SEÇÕES */
 .section {
-    margin-top: 2rem;
-    font-size: 35px;
-    font-family: 'Maven Pro', serif;
-    font-weight: 800;
-    color: #F1B523;
-    z-index: 2 !important;
-    position: relative;
-    text-align: center;
-    margin-top: -15px;
+  margin-top: 2rem;
+  font-size: 35px;
+  font-family: "Maven Pro", serif;
+  font-weight: 800;
+  color: #f1b523;
+  z-index: 2 !important;
+  position: relative;
+  text-align: center;
+  margin-top: -15px;
 }
 
 .section2 {
-    margin-top: 2rem;
-    font-size: 35px;
-    font-family: 'Maven Pro', serif;
-    font-weight: 800;
-    color: #F1B523;
-    z-index: 2 !important;
-    position: relative;
-    text-align: center;
-    margin-top: 350px;
+  margin-top: 2rem;
+  font-size: 35px;
+  font-family: "Maven Pro", serif;
+  font-weight: 800;
+  color: #f1b523;
+  z-index: 2 !important;
+  position: relative;
+  text-align: center;
+  margin-top: 350px;
 }
 
 .description {
-    margin-top: 1rem;
-    color: #333;
-    text-align: center;
-    margin-inline: auto;
-    margin-left: 50%;
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 17px;
-    color: #5E5E5E;
-    width: 40%;
-    margin-top: 50px;
-    text-align: right;
+  margin-top: 1rem;
+  color: #333;
+  text-align: center;
+  margin-inline: auto;
+  margin-left: 50%;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 17px;
+  color: #5e5e5e;
+  width: 40%;
+  margin-top: 50px;
+  text-align: right;
 }
 
 /* Menu Desktop */
 .menu-desktop ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
 .menu-desktop a:hover {
-        color: var(--gold);
-
+  color: var(--gold);
 }
 
 .menu-desktop ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.description2 {
-    margin-top: 1rem;
-    color: #333;
-    text-align: center;
-    margin-inline: auto;
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 17px;
-    color: #5E5E5E;
-    width: 80%;
-    margin-top: 5px;
-}
-
-
-.favorito {
-    font-size: 25px;
-    font-family: 'Maven Pro', serif;
-    margin-top: 70px;
-    margin-right: 11vw;
-    text-align: right;
-    font-weight: 600;
-    color: #F1B523;
-}
-
-.detalhes {
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 17px;
-    color: #5E5E5E;
-    width: 45%;
-    max-width: 45%;
-    text-align: right;
-    margin-left: 43.5vw;
-    z-index: 10;
-    position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .preco {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--gold);
-    text-align: right;
-    margin-top: .5rem;
-    margin-right: 11vw;
-    position: relative;
-}
-
-.preco2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--gold);
-    text-align: left;
-    margin-top: .5rem;
-    margin-left: 11vw;
-}
-
-.calabresa {
-    display: block;
-    margin: 1rem auto;
-    height: auto;
-    width: 40vw;
-    max-width: 40vw;
-    min-width: 40vw;
-    min-height: 40vw;
-    max-height: 40vw;
-    margin-top: -400px;
-    margin-left: 10vw;
-}
-
-.favorito2 {
-    font-size: 25px;
-    font-family: 'Maven Pro', serif;
-    text-align: left;
-    font-weight: 600;
-    color: #F1B523;
-    margin-left: 11vw;
-}
-
-.detalhes2 {
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 17px;
-    color: #5E5E5E;
-    width: 45%;
-    text-align: left;
-    margin-left: 11vw;
-    margin-top: -5px;
-
-}
-
-.picanha {
-    display: block;
-    margin: 1rem auto;
-    height: auto;
-    width: 40vw;
-    margin-top: -25%;
-    margin-right: 5vw;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-align: right;
+  margin-top: 0.5rem;
+  margin-right: 11vw;
+  position: relative;
 }
 
 .fachada {
-    display: block;
-    margin: 1rem auto;
-    height: auto;
-    border-radius: 12px;
-    width: 300px;
-    height: 400px;
-    margin-top: -320px;
-    margin-left: 120px;
+  display: block;
+  margin: 1rem auto;
+  height: auto;
+  border-radius: 12px;
+  width: 300px;
+  height: 400px;
+  margin-top: -320px;
+  margin-left: 120px;
 }
 
 .queridinhos {
-    text-align: center;
-    padding: 40px 20px;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 .queridinhos h2 {
-    color: #f9a825;
-    /* amarelo */
-    font-size: 24px;
-    margin-bottom: 30px;
+  color: #f9a825;
+  /* amarelo */
+  font-size: 24px;
+  margin-bottom: 30px;
 }
-
 
 /* blocos de prato */
 .prato {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* mais espaço entre imagem e texto */
-    flex-wrap: wrap;
-    /* quebra em telas menores */
-    margin-bottom: 50px;
-    margin-top: -80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* mais espaço entre imagem e texto */
+  flex-wrap: wrap;
+  /* quebra em telas menores */
+  margin-bottom: 50px;
+  margin-top: -80px;
 }
 
 .prato img {
-    width: 30vw;
-    border-radius: 12px;
-    margin-top: -50px;
+  width: 30vw;
+  border-radius: 12px;
+  margin-top: -50px;
 }
 
 .prato .texto {
-    max-width: 600px;
-    /* aumentei a largura do texto */
-    /* ocupa espaço proporcional */
-    text-align: left;
-    line-height: 1.6;
-    /* leitura mais confortável */
-     flex: 1 1 300px; /* cresce, encolhe e tem largura mínima */
-    word-wrap: break-word; /* quebra palavras longas */
+  max-width: 600px;
+  /* aumentei a largura do texto */
+  /* ocupa espaço proporcional */
+  text-align: left;
+  line-height: 1.6;
+  /* leitura mais confortável */
+  flex: 1 1 300px; /* cresce, encolhe e tem largura mínima */
+  word-wrap: break-word; /* quebra palavras longas */
 }
 
 .prato h3 {
-    color: #f9a825;
-    margin-bottom: 10px;
-    font-size: 20px;
+  color: #f9a825;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .preco {
-    max-width: min-content;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--gold);
-    text-align: right;
-    margin-top: .5rem;
-    margin-right: 11vw;
-    position: relative;
+  max-width: min-content;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-align: right;
+  margin-top: 0.5rem;
+  margin-right: 11vw;
+  position: relative;
 }
-
 
 /* Inverter ordem (imagem à direita) */
 .prato.invertido {
-    margin-top: -120px;
-    flex-direction: row-reverse;
+  margin-top: -120px;
+  flex-direction: row-reverse;
 }
-
-
 
 /* Divisória */
 .divisoria img {
-    width: 110vw;
-    height: 550px;
-    position: relative;
-    margin: 40px 0;
-    margin-top: 490px;
-    margin-left: -10vw;
-    pointer-events: none;
-
+  width: 110vw;
+  height: 550px;
+  position: relative;
+  margin: 40px 0;
+  margin-top: 490px;
+  margin-left: -10vw;
+  pointer-events: none;
 }
 
 .cardapio img {
-    width: 110vw;
-    height: 550px;
-    position: relative;
-    margin: 40px 0;
-    margin-top: 490px;
-    margin-left: -10vw;
-    margin-bottom: -450px;
-
+  width: 110vw;
+  height: 550px;
+  position: relative;
+  margin: 40px 0;
+  margin-top: 490px;
+  margin-left: -10vw;
+  margin-bottom: -450px;
 }
-
 
 /* AVALIAÇÕES */
 .dishes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .avaliacao-card {
-    background: white;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
-    margin: 15px;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 15px;
 }
 
 .dish-title {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .usuario {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .nome-usuario {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 /* FOOTER */
 .footer {
-    margin-top: 3rem;
-    padding: 2rem 1rem;
-    background: var(--dark-blue);
-    color: white;
-    text-align: center;
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background: var(--dark-blue);
+  color: white;
+  text-align: center;
 }
 
 .footer .logo {
-    height: 80px;
-    margin-bottom: 1rem;
+  height: 80px;
+  margin-bottom: 1rem;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .social-icons img {
-    width: 40px;
+  width: 40px;
 }
 
-.estrela{
-        height: 20px;
-    width: 20px;
-    margin-left: 57px;
+.estrela {
+  height: 20px;
+  width: 20px;
+  margin-left: 57px;
 }
 
-.dish-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-}
-
-.dish-layout.reverse {
-    flex-direction: row-reverse; /* Inverte a ordem para imagem à direita */
-}
-
-.dish-text-content {
-    flex: 1;
-    min-width: 300px; /* Garante que o bloco de texto não fique muito pequeno */
-    max-width: 45%; /* Largura padrão para desktop */
-}
-
-/* Imagens dos pratos */
-.calabresa, .picanha {
-    display: block;
-    width: 40vw; /* Ajustado em media query */
-    max-width: 450px; /* Limite máximo para a imagem */
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px; /* Adicionado um leve arredondamento */
-}
-
-/* Estilos para o segundo bloco de prato (invertido) */
-.favorito2 {
-    font-size: 25px;
-    font-family: 'Maven Pro', serif;
-    text-align: left; /* Padrão para desktop */
-    font-weight: 600;
-    color: #F1B523;
-}
-
-.detalhes2 {
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 17px;
-    color: #5E5E5E;
-    text-align: left; /* Padrão para desktop */
-}
-
-.preco2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--gold);
-    text-align: left; /* Padrão para desktop */
-    margin-top: .5rem;
-}
 
 .prato {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-    margin-top: -50px; /* Ajustado em media query */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  margin-top: -50px; /* Ajustado em media query */
 }
 
 .prato img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 12px;
-    height: auto; /* Garante que a altura se ajuste */
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  height: auto; /* Garante que a altura se ajuste */
 }
 
 .prato .texto {
-    max-width: 600px;
-    flex: 1;
-    text-align: left;
-    line-height: 1.6;
+  max-width: 600px;
+  flex: 1;
+  text-align: left;
+  line-height: 1.6;
 }
 
 .prato h3 {
-    color: #f9a825;
-    margin-bottom: 10px;
-    font-size: 20px;
+  color: #f9a825;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 /* Inverter ordem (imagem à direita) */
 .prato.invertido {
-    margin-top: -120px; /* Ajustado em media query */
-    flex-direction: row-reverse;
+  margin-top: -120px; /* Ajustado em media query */
+  flex-direction: row-reverse;
 }
 
 /* Divisória */
 .divisoria-img {
-    width: 110vw; /* Ocupa 110% da largura da viewport para um efeito de transbordo */
-    height: 550px; /* Altura fixa para desktop */
-    position: relative;
-    margin: 40px 0;
-    margin-top: 490px; /* Margem superior para posicionamento */
-    margin-left: -10vw; /* Margem negativa para centralizar o transbordo */
-    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
-    z-index: 3;
+  width: 110vw; /* Ocupa 110% da largura da viewport para um efeito de transbordo */
+  height: 550px; /* Altura fixa para desktop */
+  position: relative;
+  margin: 40px 0;
+  margin-top: 490px; /* Margem superior para posicionamento */
+  margin-left: -10vw; /* Margem negativa para centralizar o transbordo */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  z-index: 3;
 }
-
 
 /* BREAKPOINT MOBILE */
 @media (max-width: 968px) {
-
-.cardapio img {
+  .cardapio img {
     width: 110vw;
     position: relative;
     margin-left: -10vw;
     top: -200px;
+  }
+
+  .prato {
+    flex-direction: column; /* Empilhar imagem e texto */
+    margin-top: 20px; /* Ajustar margem */
+    gap: 20px;
+  }
+
+  .prato.invertido {
+    flex-direction: column; /* Também empilhar no invertido */
+    margin-top: 20px; /* Ajustar margem */
+  }
+
+  .prato .texto {
+    text-align: center; /* Centralizar texto dos queridinhos */
+    max-width: 90%; /* Ocupar mais largura */
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--dark-blue);
+    padding: 1rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    margin-top: -225px;
+    margin-left: 60vw;
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 10001;
+  }
+
+  .icon {
+    margin-top: -205px;
+    margin-left: -30px;
+  }
 }
 
-
-        .dish-layout, .dish-layout.reverse {
-        flex-direction: column; /* Empilhar imagem e texto */
-        gap: 1rem;
-        margin-top: 1rem;
-    }
-
-    /* Ajustes para as seções de descrição de pratos */
-    .dish-layout, .dish-layout.reverse {
-        flex-direction: column; /* Empilhar imagem e texto */
-        gap: 1rem;
-        margin-top: 1rem;
-    }
-
-    .dish-text-content {
-        max-width: 90%; /* Ocupar mais largura */
-        text-align: center; /* Centralizar texto */
-        margin-inline: auto;
-    }
-
-    .description, .detalhes, .favorito, .preco,
-    .description2, .detalhes2, .favorito2, .preco2 {
-        text-align: center; /* Centralizar todo o texto */
-        width: 90%; /* Ocupar mais largura */
-        margin-inline: auto; /* Centralizar blocos de texto */
-        margin-top: 10px; /* Ajustar margens */
-    }
-
-    .calabresa, .picanha {
-        width: 80vw; /* Ocupar mais largura da tela */
-        max-width: 350px; /* Limite para não ficar muito grande */
-        margin-top: 20px; /* Ajustar margem superior */
-        margin-inline: auto; /* Centralizar imagem */
-    }
-
-    .prato {
-        flex-direction: column; /* Empilhar imagem e texto */
-        margin-top: 20px; /* Ajustar margem */
-        gap: 20px;
-    }
-
-    .prato.invertido {
-        flex-direction: column; /* Também empilhar no invertido */
-        margin-top: 20px; /* Ajustar margem */
-    }
-
-    .prato .texto {
-        text-align: center; /* Centralizar texto dos queridinhos */
-        max-width: 90%; /* Ocupar mais largura */
-    }
-
-    .menu-desktop {
-        display: none;
-    }
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        background: var(--dark-blue);
-        padding: 1rem;
-    }
-
-    nav ul.open {
-        display: flex;
-    }
-
-    .nav-toggle {
-        margin-top: -225px;
-        margin-left: 60vw;
-        display: block;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-        z-index: 10001;
-    }
-
-    .icon{
-                margin-top: -205px;
-                margin-left: -30px;
-
-    }
-        
-    }
-
-    .menu {
+.menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -691,145 +509,126 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateX(100%);  /* escondido à direita */
+  transform: translateX(100%); /* escondido à direita */
   transition: transform 0.3s ease-in-out;
-    z-index: 9999 !important;
+  z-index: 9999 !important;
 }
 
-    /* Overlay Mobile */
-    .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0,0,0,0.95);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 10000;
-    }
+/* Overlay Mobile */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10000;
+}
 
-    .menu.open {
-        transform: translateX(0);
-    }
+.menu.open {
+  transform: translateX(0);
+}
 
-    .menu li {
-        margin: 20px 0;
-    }
+.menu li {
+  margin: 20px 0;
+}
 
-    .menu li a {
-        color: white;
-        font-size: 1.8rem;
-        text-decoration: none;
-    }
+.menu li a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
 
+.description {
+  margin-left: 10%;
+  width: 80vw;
+  text-align: justify;
+}
 
-    .description {
-        margin-left: 10%;
-        width: 80vw;
-        text-align: justify;
-    }
+.description-prato {
+  width: 85%;
+  text-align: justify;
+}
 
-    
-    .description-prato {
-        width: 85%;
-        text-align: justify;
-    }
+.fachada {
+  width: 70vw; /* Ocupar mais largura */
+  height: auto; /* Altura automática */
+  margin-top: 20px; /* Ajustar margem superior */
+  margin-left: auto; /* Centralizar */
+  margin-right: auto; /* Centralizar */
+  display: block; /* Garantir que seja um bloco para centralizar */
+}
 
-    .fachada {
+.cardapio {
+  position: relative;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-                width: 70vw; /* Ocupar mais largura */
-        height: auto; /* Altura automática */
-        margin-top: 20px; /* Ajustar margem superior */
-        margin-left: auto; /* Centralizar */
-        margin-right: auto; /* Centralizar */
-        display: block; /* Garantir que seja um bloco para centralizar */
-    }
-
-        .cardapio {
-        position: relative;
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .divisoria img,
+.divisoria img,
 .cardapio img {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .cardapio img {
-    margin-top: 150px;
+  margin-top: 150px;
 }
 
-.body2{
-    position: relative;
-    z-index: 0 !important;
-    pointer-events: none;
+.body2 {
+  position: relative;
+  z-index: 0 !important;
+  pointer-events: none;
 }
 
- .fachada {
-        width: 45vw; /* Ocupar quase toda a largura */
-    }
+.fachada {
+  width: 45vw; /* Ocupar quase toda a largura */
+}
 
+@media (max-width: 576px) {
+  .header-top {
+    flex-wrap: wrap; /* Permite que os itens do header quebrem */
+    justify-content: center; /* Centraliza itens se quebrarem */
+  }
 
-    @media (max-width: 576px) {
-    .header-top {
-        flex-wrap: wrap; /* Permite que os itens do header quebrem */
-        justify-content: center; /* Centraliza itens se quebrarem */
-    }
+  .icon {
+    height: 50px;
+  }
 
-    .icon {
-        height: 50px;
-    }
+  .nav-toggle {
+    margin-right: 0.5rem; /* Ajustar margem */
+  }
 
-    .nav-toggle {
-        margin-right: 0.5rem; /* Ajustar margem */
-    }
+  nav ul {
+    top: 60px; /* Ajustar posição do menu mobile */
+  }
 
-    nav ul {
-        top: 60px; /* Ajustar posição do menu mobile */
-    }
+  .titulo {
+    font-size: clamp(1.5rem, 10vw, 2rem);
+  }
 
-    .titulo {
-        font-size: clamp(1.5rem, 10vw, 2rem);
-    }
+  .subtitle {
+    font-size: clamp(0.8rem, 5vw, 1rem);
+  }
 
-    .subtitle {
-        font-size: clamp(0.8rem, 5vw, 1rem);
-    }
+  .slogan {
+    font-size: 0.9rem;
+  }
 
-    .slogan {
-        font-size: 0.9rem;
-    }
+  .section,
+  .section2 {
+    font-size: 24px;
+  }
 
-    .section, .section2 {
-        font-size: 24px;
-    }
+  .prato img {
+    max-width: 250px; /* Reduzir um pouco mais */
+  }
 
-    .favorito, .favorito2 {
-        font-size: 22px;
-    }
-
-    .description, .detalhes, .preco,
-    .description2, .detalhes2, .preco2 {
-        font-size: 16px;
-    }
-
-    .calabresa, .picanha, .fachada {
-        width: 95vw; /* Ocupar quase toda a largura */
-    }
-
-    .prato img {
-        max-width: 250px; /* Reduzir um pouco mais */
-    }
-
-    .divisoria-img {
-        height: 200px; /* Altura ainda menor */
-    }
 }
