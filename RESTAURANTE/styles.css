@@ -74,16 +74,23 @@ header {
     pointer-events: none;
 }
 
-.cardapio {
-    position: relative;
-    min-width: 100vw;
+.cardapio{
+        position: relative;
+    min-width: 100%;
     max-width: 100%;
-    height: 90%;
+    min-height: 85%;
+    max-height: 115vw;
     color: white;
     object-fit: cover;
-    margin-top: -623px;
     z-index: 3;
     pointer-events: none;
+    margin-left: 22px;
+}
+
+.cardapio img {
+    width: 110vw;
+    position: relative;
+    top: -150px;
 }
 
 .menu {
@@ -156,8 +163,7 @@ nav a:hover {
 }
 
 /* SEÇÕES */
-.section,
-.section2 {
+.section {
     margin-top: 2rem;
     font-size: 35px;
     font-family: 'Maven Pro', serif;
@@ -167,6 +173,18 @@ nav a:hover {
     position: relative;
     text-align: center;
     margin-top: -15px;
+}
+
+.section2 {
+    margin-top: 2rem;
+    font-size: 35px;
+    font-family: 'Maven Pro', serif;
+    font-weight: 800;
+    color: #F1B523;
+    z-index: 2 !important;
+    position: relative;
+    text-align: center;
+    margin-top: 350px;
 }
 
 .description {
@@ -179,7 +197,7 @@ nav a:hover {
     font-size: 17px;
     color: #5E5E5E;
     width: 40%;
-    margin-top: 75px;
+    margin-top: 50px;
     text-align: right;
 }
 
@@ -264,7 +282,7 @@ nav a:hover {
     min-width: 40vw;
     min-height: 40vw;
     max-height: 40vw;
-    margin-top: -320px;
+    margin-top: -400px;
     margin-left: 10vw;
 }
 
@@ -326,28 +344,28 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
     /* mais espaço entre imagem e texto */
     flex-wrap: wrap;
     /* quebra em telas menores */
     margin-bottom: 50px;
-    margin-top: -50px;
+    margin-top: -80px;
 }
 
 .prato img {
-    width: 100%;
-    max-width: 300px;
+    width: 30vw;
     border-radius: 12px;
+    margin-top: -50px;
 }
 
 .prato .texto {
     max-width: 600px;
     /* aumentei a largura do texto */
-    flex: 1;
     /* ocupa espaço proporcional */
     text-align: left;
     line-height: 1.6;
     /* leitura mais confortável */
+     flex: 1 1 300px; /* cresce, encolhe e tem largura mínima */
+    word-wrap: break-word; /* quebra palavras longas */
 }
 
 .prato h3 {
@@ -374,6 +392,8 @@ nav a:hover {
     flex-direction: row-reverse;
 }
 
+
+
 /* Divisória */
 .divisoria img {
     width: 110vw;
@@ -393,6 +413,7 @@ nav a:hover {
     margin: 40px 0;
     margin-top: 490px;
     margin-left: -10vw;
+    margin-bottom: -450px;
 
 }
 
@@ -461,8 +482,169 @@ nav a:hover {
     margin-left: 57px;
 }
 
+.dish-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+}
+
+.dish-layout.reverse {
+    flex-direction: row-reverse; /* Inverte a ordem para imagem à direita */
+}
+
+.dish-text-content {
+    flex: 1;
+    min-width: 300px; /* Garante que o bloco de texto não fique muito pequeno */
+    max-width: 45%; /* Largura padrão para desktop */
+}
+
+/* Imagens dos pratos */
+.calabresa, .picanha {
+    display: block;
+    width: 40vw; /* Ajustado em media query */
+    max-width: 450px; /* Limite máximo para a imagem */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Adicionado um leve arredondamento */
+}
+
+/* Estilos para o segundo bloco de prato (invertido) */
+.favorito2 {
+    font-size: 25px;
+    font-family: 'Maven Pro', serif;
+    text-align: left; /* Padrão para desktop */
+    font-weight: 600;
+    color: #F1B523;
+}
+
+.detalhes2 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 17px;
+    color: #5E5E5E;
+    text-align: left; /* Padrão para desktop */
+}
+
+.preco2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-align: left; /* Padrão para desktop */
+    margin-top: .5rem;
+}
+
+.prato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-top: -50px; /* Ajustado em media query */
+}
+
+.prato img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    height: auto; /* Garante que a altura se ajuste */
+}
+
+.prato .texto {
+    max-width: 600px;
+    flex: 1;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.prato h3 {
+    color: #f9a825;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Inverter ordem (imagem à direita) */
+.prato.invertido {
+    margin-top: -120px; /* Ajustado em media query */
+    flex-direction: row-reverse;
+}
+
+/* Divisória */
+.divisoria-img {
+    width: 110vw; /* Ocupa 110% da largura da viewport para um efeito de transbordo */
+    height: 550px; /* Altura fixa para desktop */
+    position: relative;
+    margin: 40px 0;
+    margin-top: 490px; /* Margem superior para posicionamento */
+    margin-left: -10vw; /* Margem negativa para centralizar o transbordo */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    z-index: 3;
+}
+
+
 /* BREAKPOINT MOBILE */
 @media (max-width: 968px) {
+
+.cardapio img {
+    width: 110vw;
+    position: relative;
+    margin-left: -10vw;
+    top: -200px;
+}
+
+
+        .dish-layout, .dish-layout.reverse {
+        flex-direction: column; /* Empilhar imagem e texto */
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    /* Ajustes para as seções de descrição de pratos */
+    .dish-layout, .dish-layout.reverse {
+        flex-direction: column; /* Empilhar imagem e texto */
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .dish-text-content {
+        max-width: 90%; /* Ocupar mais largura */
+        text-align: center; /* Centralizar texto */
+        margin-inline: auto;
+    }
+
+    .description, .detalhes, .favorito, .preco,
+    .description2, .detalhes2, .favorito2, .preco2 {
+        text-align: center; /* Centralizar todo o texto */
+        width: 90%; /* Ocupar mais largura */
+        margin-inline: auto; /* Centralizar blocos de texto */
+        margin-top: 10px; /* Ajustar margens */
+    }
+
+    .calabresa, .picanha {
+        width: 80vw; /* Ocupar mais largura da tela */
+        max-width: 350px; /* Limite para não ficar muito grande */
+        margin-top: 20px; /* Ajustar margem superior */
+        margin-inline: auto; /* Centralizar imagem */
+    }
+
+    .prato {
+        flex-direction: column; /* Empilhar imagem e texto */
+        margin-top: 20px; /* Ajustar margem */
+        gap: 20px;
+    }
+
+    .prato.invertido {
+        flex-direction: column; /* Também empilhar no invertido */
+        margin-top: 20px; /* Ajustar margem */
+    }
+
+    .prato .texto {
+        text-align: center; /* Centralizar texto dos queridinhos */
+        max-width: 90%; /* Ocupar mais largura */
+    }
+
     .menu-desktop {
         display: none;
     }
@@ -492,6 +674,7 @@ nav a:hover {
 
     .icon{
                 margin-top: -205px;
+                margin-left: -30px;
 
     }
         
@@ -551,13 +734,20 @@ nav a:hover {
         text-align: justify;
     }
 
+    
+    .description-prato {
+        width: 85%;
+        text-align: justify;
+    }
+
     .fachada {
-        position: relative;
-        margin-top: 40px;
-        margin-left: 23%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+                width: 70vw; /* Ocupar mais largura */
+        height: auto; /* Altura automática */
+        margin-top: 20px; /* Ajustar margem superior */
+        margin-left: auto; /* Centralizar */
+        margin-right: auto; /* Centralizar */
+        display: block; /* Garantir que seja um bloco para centralizar */
     }
 
         .cardapio {
@@ -573,8 +763,73 @@ nav a:hover {
     pointer-events: none;
 }
 
+.cardapio img {
+    margin-top: 150px;
+}
+
 .body2{
     position: relative;
     z-index: 0 !important;
     pointer-events: none;
+}
+
+ .fachada {
+        width: 45vw; /* Ocupar quase toda a largura */
+    }
+
+
+    @media (max-width: 576px) {
+    .header-top {
+        flex-wrap: wrap; /* Permite que os itens do header quebrem */
+        justify-content: center; /* Centraliza itens se quebrarem */
+    }
+
+    .icon {
+        height: 50px;
+    }
+
+    .nav-toggle {
+        margin-right: 0.5rem; /* Ajustar margem */
+    }
+
+    nav ul {
+        top: 60px; /* Ajustar posição do menu mobile */
+    }
+
+    .titulo {
+        font-size: clamp(1.5rem, 10vw, 2rem);
+    }
+
+    .subtitle {
+        font-size: clamp(0.8rem, 5vw, 1rem);
+    }
+
+    .slogan {
+        font-size: 0.9rem;
+    }
+
+    .section, .section2 {
+        font-size: 24px;
+    }
+
+    .favorito, .favorito2 {
+        font-size: 22px;
+    }
+
+    .description, .detalhes, .preco,
+    .description2, .detalhes2, .preco2 {
+        font-size: 16px;
+    }
+
+    .calabresa, .picanha, .fachada {
+        width: 95vw; /* Ocupar quase toda a largura */
+    }
+
+    .prato img {
+        max-width: 250px; /* Reduzir um pouco mais */
+    }
+
+    .divisoria-img {
+        height: 200px; /* Altura ainda menor */
+    }
 }
