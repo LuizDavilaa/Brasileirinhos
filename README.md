@@ -39,11 +39,11 @@ A prototipagem do design foi realizada no **Figma**, permitindo uma visualizaç�
 1. Clone este repositório:  
 ```bash
 git clone https://github.com/LuizDavilaa/Brasileirinhos.git
-
+```
 
 2. Abra o arquivo `index.html` no seu navegador preferido.
 
 ## Conclusão
-A realização do projeto permitiu ao grupo aplicar, na prática, os conceitos aprendidos em sala de aula sobre desenvolvimento web básico (HTML e CSS) e prototipagem. Além do aprendizado técnico, também desenvolvemos habilidades de trabalho em equipe, divisão de tarefas e organização.
+A realização do projeto permitiu ao grupo aplicar, na prática, os conceitos aprendidos em sala de aula sobre desenvolvimento web básico (HTML, CSS e JS) e prototipagem. Além do aprendizado técnico, também desenvolvemos habilidades de trabalho em equipe, divisão de tarefas e organização.
 
 Como melhorias futuras, seria possível ampliar o cardápio, implementar funcionalidades de pedido online e tornar a página mais interativa.
